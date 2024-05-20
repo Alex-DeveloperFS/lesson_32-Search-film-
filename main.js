@@ -20,8 +20,8 @@ const getData = url => fetch(url)
   .then(res => res.json())
   .then(data => {
     if (!data || !data.Search) throw new Error('No films found')
-    return  data.Search
-})
+    return data.Search
+  })
 
 const addMovieToList = movie => {
   const item = document.createElement('div')
@@ -42,6 +42,7 @@ const clearMoviesMarkup = () => {
   if (moviesListElement) moviesListElement.innerHTML = ''
 }
 
+
 const inputSearchHandler = e => {
   debounceTime(() => {
     const searchQuery = e.target.value.trim()
@@ -57,7 +58,6 @@ const inputSearchHandler = e => {
 
   }, 1000)
 }
-
 
 searchInput.addEventListener('input', inputSearchHandler)
 searchCheckbox.addEventListener('change', e => (isSearchTriggerEnabled = e.target.checked))

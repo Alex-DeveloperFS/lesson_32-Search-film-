@@ -11,40 +11,52 @@ body {
   padding: 0;
   font-family: "Roboto", sans-serif;
   font-size: 24px;
+  background-image: url("src/img/78c4e47ae055f4de25eb04640d5c22fe.jpg");
+
 }
 
 .container {
   width: min(100% - 40px, 1280px);
   margin-inline: auto;
+  background-image: url("src/img/puzzle-wallpaper-cole-and-son.jpg");
+  background-repeat: repeat;
+  background-size: cover;
+  min-height: 100vh;
 }
 
 .title {
   font-size: 36px;
   font-weight: 700;
   margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
+  padding-top: 20px;
+
 }
 
 .search {
   margin-bottom: 20px;
+
 }
 
 .search__group {
-
+  display: flex;
+  justify-content: center;
 }
 
 .search__group--input {
-margin-bottom: 10px;
+  margin-bottom: 10px;
   display: flex;
-  gap: 10px;
+
 }
 
 .search__label-input {
-  display: block;
   margin-bottom: 5px;
 }
 
 .search__input {
-display: block;
+  display: block;
   max-width: 400px;
   width: 100%;
   padding: 10px 15px;
@@ -57,14 +69,13 @@ display: block;
 }
 
 .search--group--checkbox {
-
-display: flex;
-align-items: center;
+  display: flex;
+  align-items: center;
 
 }
 
 .search__label-checkbox {
-user-select: none;
+  user-select: none;
   font-size: 16px;
 }
 
@@ -76,18 +87,40 @@ user-select: none;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 20px;
-  margin-bottom: 50px;
+  padding: 20px;
 }
 
 .movie {
   display: flex;
   align-content: center;
   justify-content: center;
-
-
 }
 
 .movie-image {
   width: 100%;
   object-fit: cover;
+}
+
+@media (max-width: 1280px) {
+  .container {
+    width: min(100% - 40px, 991px);
+  }
+}
+
+@media (max-width: 991px) {
+  .container {
+    width: min(100% - 40px, 768px);
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: min(100% - 40px, 576px);
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    width: min(100% - 40px, 440px);
+  }
 }
